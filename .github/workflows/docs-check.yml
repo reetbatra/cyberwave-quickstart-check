@@ -1,0 +1,22 @@
+name: cyberwave docs
+
+# Runs the checker against the live docs and the latest SDK from PyPI.
+# Red means the docs show a call the SDK doesn't have. It turns green on
+# its own once the docs are fixed.
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: python check.py
