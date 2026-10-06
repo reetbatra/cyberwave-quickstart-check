@@ -27,8 +27,8 @@ A detail about `set_joint`: `joints.set()` takes radians by default, so fixing o
 The only `use_controller` in the SDK is `robot.navigation.use_controller(policy_uuid)`, which takes a policy UUID rather than `"keyboard"`. Whether the docs or the SDK should change there is Cyberwave's call, so I asked instead of guessing.
 
 **Upstream:**
-- PR [cyberwave-os/docs-mintlify#105](https://github.com/cyberwave-os/docs-mintlify/pull/105) fixes the `twins` and `set_joint` calls. With it applied, only the two `use_controller` lines in the Quickstart still fail, and #104 covers those.
-- Issue [cyberwave-os/docs-mintlify#104](https://github.com/cyberwave-os/docs-mintlify/issues/104) asks about `use_controller`.
+- PR [cyberwave-os/docs-mintlify#105](https://github.com/cyberwave-os/docs-mintlify/pull/105) fixes the `twins` and `set_joint` calls. Merged 25 Sep 2026.
+- Issue [cyberwave-os/docs-mintlify#104](https://github.com/cyberwave-os/docs-mintlify/issues/104) asked about `use_controller`. Fixed in the docs on 25 Sep 2026, so the weekly run is green: 132 calls checked, 0 broken on 5 Oct 2026.
 
 ## Run it
 
